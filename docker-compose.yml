@@ -1,0 +1,16 @@
+version: '3s'
+
+services:
+    db:
+        image: postgres:15-alpine
+        volumes:
+          - postgres_data:/var/lib/postgresql/data/
+        ports:
+          - "5433:5432"
+        environment:
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=postgres
+          - POSTGRES_DB=smonitor
+
+volumes:
+  postgres_data:

@@ -1,0 +1,6 @@
+2025-12-05 11:43:14,348 - INFO - main - Request: GET / from 127.0.0.1
+2025-12-05 11:43:16,349 - INFO - main - Response: GET / returned 200 to 127.0.0.1
+2025-12-05 11:43:18,901 - INFO - main - Request: GET /docs from 127.0.0.1
+2025-12-05 11:43:18,901 - INFO - main - Response: GET /docs returned 200 to 127.0.0.1
+2025-12-05 11:43:19,083 - INFO - main - Request: GET /openapi.json from 127.0.0.1
+2025-12-05 11:43:19,083 - INFO - main - Response: GET /openapi.json returned 200 to 127.0.0.1
