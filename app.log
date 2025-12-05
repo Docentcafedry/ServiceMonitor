@@ -4,3 +4,199 @@
 2025-12-05 11:43:18,901 - INFO - main - Response: GET /docs returned 200 to 127.0.0.1
 2025-12-05 11:43:19,083 - INFO - main - Request: GET /openapi.json from 127.0.0.1
 2025-12-05 11:43:19,083 - INFO - main - Response: GET /openapi.json returned 200 to 127.0.0.1
+2025-12-05 18:07:49,824 - INFO - main - Request: GET / from 127.0.0.1
+2025-12-05 18:07:51,825 - INFO - main - Response: GET / returned 200 to 127.0.0.1
+2025-12-05 18:07:51,920 - INFO - main - Request: GET /favicon.ico from 127.0.0.1
+2025-12-05 18:07:51,920 - INFO - main - Response: GET /favicon.ico returned 404 to 127.0.0.1
+2025-12-05 18:07:56,634 - INFO - main - Request: GET /docs from 127.0.0.1
+2025-12-05 18:07:56,635 - INFO - main - Response: GET /docs returned 200 to 127.0.0.1
+2025-12-05 18:07:56,717 - INFO - main - Request: GET /openapi.json from 127.0.0.1
+2025-12-05 18:07:56,718 - INFO - main - Response: GET /openapi.json returned 200 to 127.0.0.1
+2025-12-05 18:49:31,004 - INFO - main - Request: GET / from 127.0.0.1
+2025-12-05 18:49:33,005 - INFO - main - Response: GET / returned 200 to 127.0.0.1
+2025-12-05 18:49:33,182 - INFO - main - Request: GET /favicon.ico from 127.0.0.1
+2025-12-05 18:49:33,183 - INFO - main - Response: GET /favicon.ico returned 404 to 127.0.0.1
+2025-12-05 18:49:36,375 - INFO - main - Request: GET /docs from 127.0.0.1
+2025-12-05 18:49:36,375 - INFO - main - Response: GET /docs returned 200 to 127.0.0.1
+2025-12-05 18:49:36,504 - INFO - main - Request: GET /openapi.json from 127.0.0.1
+2025-12-05 18:49:36,506 - INFO - main - Response: GET /openapi.json returned 200 to 127.0.0.1
+2025-12-05 18:53:16,189 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 29, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 18:54:00,037 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 29, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 18:54:28,506 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 29, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 18:55:03,362 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 18:55:19,754 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 18:55:41,495 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 36, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 18:55:59,678 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 36, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 21:50:23,470 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 21:51:53,308 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=TypeError("AsyncSession.execute() missing 1 required positional argument: 'self'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AsyncSession.execute() missing 1 required positional argument: 'self'
+2025-12-05 21:52:24,471 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=AttributeError("'async_generator' object has no attribute 'execute'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ^^^^^^^^^^^^^^^
+AttributeError: 'async_generator' object has no attribute 'execute'
+2025-12-05 21:52:48,652 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=AttributeError("'async_generator' object has no attribute 'execute'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 25, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ^^^^^^^^^^^^^^^
+AttributeError: 'async_generator' object has no attribute 'execute'
+2025-12-05 21:53:13,698 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:21> exception=AttributeError("'async_generator' object has no attribute 'execute'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ^^^^^^^^^^^^^^^
+AttributeError: 'async_generator' object has no attribute 'execute'
+2025-12-05 22:17:15,186 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:20> exception=AttributeError("'async_generator' object has no attribute 'execute'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ^^^^^^^^^^^^^^^
+AttributeError: 'async_generator' object has no attribute 'execute'
+2025-12-05 22:21:58,039 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:20> exception=AttributeError("'async_generator_asend' object has no attribute 'execute'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ^^^^^^^^^^^^^^^
+AttributeError: 'async_generator_asend' object has no attribute 'execute'
+2025-12-05 22:22:26,038 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:20> exception=AttributeError("'async_generator_asend' object has no attribute 'execute'")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 24, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_status_for_all_domains
+    domains = await get_all_domains_from_db(session=db_session)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 35, in get_all_domains_from_db
+    res: Result = await session.execute(statement=select(Domain))
+                        ^^^^^^^^^^^^^^^
+AttributeError: 'async_generator_asend' object has no attribute 'execute'

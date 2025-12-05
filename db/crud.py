@@ -1,5 +1,5 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from .models import Domain, Examination
+from .models import Domain, Examination as ExaminationModel
 from exceptions import (
     DomainAlreadyExistsError,
     ExaminationCreateDBError,
@@ -18,10 +18,12 @@ async def add_domain_to_database(domain: str, session: AsyncSession):
         await session.commit()
     except IntegrityError:
         raise DomainAlreadyExistsError
+    await session.flush()
+    return new_domain
 
 
 async def add_examination_to_database(examination: Examination, session: AsyncSession):
-    new_examination = Examination(**examination.model_dump())
+    new_examination = ExaminationModel(**examination.model_dump())
     session.add(new_examination)
     try:
         await session.commit()
@@ -30,7 +32,7 @@ async def add_examination_to_database(examination: Examination, session: AsyncSe
 
 
 async def get_all_domains_from_db(session: AsyncSession):
-    res: Result = await session.execute(select(Domain))
+    res: Result = await session.execute(statement=select(Domain))
     return res.scalars().all()
 
 
