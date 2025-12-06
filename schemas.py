@@ -11,10 +11,18 @@ class Examination(BaseModel):
     domain_id: int
 
 
+class ExaminationDB(BaseModel):
+    id: int
+    status_code: int
+    examination_time: datetime.datetime
+    response_time: datetime.timedelta
+    domain_id: int
+
+
 class Domain(BaseModel):
     id: int
     domain: str
 
 
 class DomainWithExaminations(Domain):
-    examinations: List[Examination]
+    examinations: List[ExaminationDB]

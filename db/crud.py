@@ -27,6 +27,7 @@ async def add_examination_to_database(examination: Examination, session: AsyncSe
     session.add(new_examination)
     try:
         await session.commit()
+        await session.flush()
     except ArgumentError:
         raise ExaminationCreateDBError
 
@@ -37,13 +38,15 @@ async def get_all_domains_from_db(session: AsyncSession):
 
 
 async def get_domain_and_examination_from_db(domain: str, session: AsyncSession):
+    domain_name = "https://www." + domain + "/"
+    print(domain_name)
     stmt = (
         select(Domain)
-        .where(Domain.domain == domain)
+        .where(Domain.domain == domain_name)
         .options(joinedload(Domain.examinations))
     )
     result: Result = await session.execute(stmt)
-    domain: Domain = result.scalar_one_or_none()
+    domain: Domain = result.unique().scalar_one_or_none()
     if not domain:
         raise NoDomainFoundError
     return domain
