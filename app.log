@@ -4613,3 +4613,78 @@ Traceback (most recent call last):
 sqlalchemy.exc.IllegalStateChangeError: Method 'commit()' can't be called here; method '_prepare_impl()' is already in progress and this would cause an unexpected state change to <SessionTransactionState.CLOSED: 5> (Background on this error at: https://sqlalche.me/e/20/isce)
 2025-12-06 10:46:28,999 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
 2025-12-06 10:46:29,024 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-08 13:03:01,682 - INFO - main - Request: GET / from 127.0.0.1
+2025-12-08 13:03:01,682 - INFO - main - Response: GET / returned 404 to 127.0.0.1
+2025-12-08 13:03:01,786 - INFO - main - Request: GET /favicon.ico from 127.0.0.1
+2025-12-08 13:03:01,787 - INFO - main - Response: GET /favicon.ico returned 404 to 127.0.0.1
+2025-12-08 13:03:05,537 - INFO - main - Request: GET /docs from 127.0.0.1
+2025-12-08 13:03:05,537 - INFO - main - Response: GET /docs returned 200 to 127.0.0.1
+2025-12-08 13:03:05,618 - INFO - main - Request: GET /openapi.json from 127.0.0.1
+2025-12-08 13:03:05,621 - INFO - main - Response: GET /openapi.json returned 200 to 127.0.0.1
+2025-12-08 13:03:11,929 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:03:38,484 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:26> exception=IllegalStateChangeError("Method 'commit()' can't be called here; method '_prepare_impl()' is already in progress and this would cause an unexpected state change to <SessionTransactionState.CLOSED: 5>")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 29, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 44, in get_status_for_all_domains
+    await asyncio.gather(
+    ...<4 lines>...
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 29, in get_service_status
+    await add_examination_to_database(session=db_session, examination=examination)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 29, in add_examination_to_database
+    await session.commit()
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/ext/asyncio/session.py", line 1000, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.switch(*args, **kwargs)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1329, in commit
+    self._parent.commit(_to_root=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 119, in _go
+    raise sa_exc.IllegalStateChangeError(
+    ...<5 lines>...
+    )
+sqlalchemy.exc.IllegalStateChangeError: Method 'commit()' can't be called here; method '_prepare_impl()' is already in progress and this would cause an unexpected state change to <SessionTransactionState.CLOSED: 5> (Background on this error at: https://sqlalche.me/e/20/isce)
+2025-12-08 13:03:38,876 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:03:38,901 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:03:53,481 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:03:53,486 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:03:53,490 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:03:53,495 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:03:53,497 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:03:53,530 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:11,389 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:11,392 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:11,394 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:11,397 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:11,400 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:11,403 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:29,757 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:29,761 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:29,762 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:29,765 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:48,504 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:48,507 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:05:48,508 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:05:48,511 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:10:55,138 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:10:55,142 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:10:55,144 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:10:55,150 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:11:14,745 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:11:14,748 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:11:14,750 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:11:14,753 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:11:15,441 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:11:15,444 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-08 13:11:15,445 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-08 13:11:15,472 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1

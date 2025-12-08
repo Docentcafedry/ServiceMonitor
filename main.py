@@ -12,8 +12,9 @@ from service import get_status_for_all_domains
 from sqlalchemy.ext.asyncio import AsyncSession
 from db import get_db_connection, async_session
 from depends import db_connection
-from service import add_domain, get_domain_with_examinations
+from service import add_domain, get_domain_with_examinations, get_all_domains
 from exceptions import DomainAlreadyExistsError, NoDomainFoundError
+from fastapi.middleware.cors import CORSMiddleware
 
 logging.basicConfig(
     filename="app.log",
@@ -43,7 +44,22 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 app.add_middleware(RequestLoggingMiddleware, logger=logger)
+
+
+@app.get("/domains", status_code=status.HTTP_200_OK)
+async def get_domains(db_session: db_connection):
+    domains = await get_all_domains(session=db_session)
+    return domains
 
 
 @app.post("/add_domain", status_code=status.HTTP_201_CREATED)

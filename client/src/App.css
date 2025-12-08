@@ -1,0 +1,164 @@
+.container {
+    padding: 30px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px 35px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.value {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.value.green { color: #28a745; }
+.value.blue { color: #007bff; }
+.value.purple { color: #8b4de8; }
+.value.orange { color: #ff8c00; }
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #28a745;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.site-url {
+    color: #555;
+}
+
+.availability-grid {
+    display: grid;
+    grid-template-columns: repeat(30, 12px);
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.ok { background: #28a745; }
+.bad { background: #e74a3b; }
+.none { background: #d8d8d8; }
+
+.legend {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.domain-card {
+    background: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    max-width: 280px;
+    border: 1px solid #eee;
+    transition: 0.2s ease;
+}
+
+.domain-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.domain-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-dot.online {
+    background: #28a745;
+}
+
+.status-dot.offline {
+    background: #e74a3b;
+}
+
+.status-dot.unknown {
+    background: #bbb;
+}
+
+.domain-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.domain-note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+.domain-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0077ff;
+    text-decoration: none;
+}
+
+.domain-link:hover {
+    text-decoration: underline;
+}
