@@ -4688,3 +4688,351 @@ sqlalchemy.exc.IllegalStateChangeError: Method 'commit()' can't be called here; 
 2025-12-08 13:11:15,444 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
 2025-12-08 13:11:15,445 - INFO - main - Request: GET /domains from 127.0.0.1
 2025-12-08 13:11:15,472 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:18:51,308 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:18:51,312 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:18:51,314 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:18:51,318 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:18,470 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:18,474 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:18,477 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:18,482 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:19,548 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:19,556 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:19,561 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:19,614 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:54,036 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:54,040 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:54,044 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:54,047 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:59,863 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:59,868 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:19:59,870 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:19:59,878 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:20:11,464 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:20:11,467 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:20:11,469 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:20:11,473 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:20:23,529 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:20:23,534 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:20:23,536 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:20:23,544 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:20:23,938 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:20:23,942 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:20:23,943 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:20:23,950 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:02,411 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:02,415 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:03,269 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:03,276 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:04,538 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:04,544 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:04,547 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:04,550 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:30,106 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:30,109 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:30,111 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:30,113 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:30,883 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:30,889 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:30,893 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:30,905 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:31,798 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:31,807 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:31,809 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:31,815 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:38,150 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:38,155 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:38,161 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:38,172 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:40,177 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:40,181 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:40,182 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:40,186 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:41,289 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:41,297 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:41,301 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:41,311 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:42,749 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:42,754 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:42,756 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:42,759 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:49,969 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:49,972 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:21:49,973 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:21:49,977 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:33,731 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:33,735 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:33,737 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:33,741 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:48,787 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:48,790 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:48,791 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:48,794 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:54,685 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:54,689 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:54,691 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:54,697 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:55,504 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:55,512 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:22:55,514 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:22:55,521 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:23:15,301 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:23:15,308 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:23:15,314 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:23:15,323 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:23:15,954 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:23:15,958 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:23:15,960 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:23:15,966 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:23:39,281 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=IllegalStateChangeError("Method 'commit()' can't be called here; method 'commit()' is already in progress and this would cause an unexpected state change to <SessionTransactionState.CLOSED: 5>")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(session=session, db_session=db_session)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 44, in get_status_for_all_domains
+    await asyncio.gather(
+    ...<4 lines>...
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 29, in get_service_status
+    await add_examination_to_database(session=db_session, examination=examination)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 29, in add_examination_to_database
+    await session.commit()
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/ext/asyncio/session.py", line 1000, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.switch(*args, **kwargs)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 119, in _go
+    raise sa_exc.IllegalStateChangeError(
+    ...<5 lines>...
+    )
+sqlalchemy.exc.IllegalStateChangeError: Method 'commit()' can't be called here; method 'commit()' is already in progress and this would cause an unexpected state change to <SessionTransactionState.CLOSED: 5> (Background on this error at: https://sqlalche.me/e/20/isce)
+2025-12-09 10:24:04,353 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:04,357 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:04,359 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:04,362 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:05,027 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:05,031 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:05,032 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:05,070 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:14,944 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:14,948 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:14,950 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:14,954 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:18,424 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:18,433 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:24:18,438 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:24:18,452 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:29:48,555 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:29:48,560 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:29:48,564 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:29:48,576 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:29:48,578 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:29:48,585 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:29:48,586 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:29:48,591 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:30:10,832 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:30:10,835 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:30:10,837 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:30:10,840 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:30:11,651 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:30:11,656 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:30:11,658 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:30:11,663 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:33,843 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:33,847 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:33,849 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:33,854 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:40,128 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:40,138 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:40,142 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:40,151 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:41,111 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:41,118 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:41,120 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:41,127 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:57,153 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:57,158 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:31:57,160 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:31:57,164 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:33:09,769 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:33:09,773 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:33:09,775 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:33:09,778 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:33:30,025 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:33:30,032 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:33:30,034 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:33:30,038 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:33:46,370 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:33:46,378 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:33:46,380 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:33:46,387 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:35:37,562 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:35:37,569 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:35:37,571 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:35:37,577 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:35:38,375 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:35:38,379 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:35:38,383 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:35:38,391 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:35:51,016 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:35:51,020 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:35:51,021 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:35:51,024 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:36:11,882 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:36:11,888 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:36:11,893 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:36:11,899 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:40:17,709 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:40:17,713 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:40:17,716 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:40:17,722 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:40:33,597 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:40:33,600 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:40:33,601 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:40:33,604 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:40:45,722 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:40:45,727 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:40:45,729 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 10:40:45,732 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 10:52:58,425 - INFO - main - Request: GET / from 127.0.0.1
+2025-12-09 10:52:58,425 - INFO - main - Response: GET / returned 404 to 127.0.0.1
+2025-12-09 10:52:58,616 - INFO - main - Request: GET /favicon.ico from 127.0.0.1
+2025-12-09 10:52:58,617 - INFO - main - Response: GET /favicon.ico returned 404 to 127.0.0.1
+2025-12-09 10:53:02,758 - INFO - main - Request: GET /docs from 127.0.0.1
+2025-12-09 10:53:02,759 - INFO - main - Response: GET /docs returned 200 to 127.0.0.1
+2025-12-09 10:53:03,857 - INFO - main - Request: GET /openapi.json from 127.0.0.1
+2025-12-09 10:53:03,862 - INFO - main - Response: GET /openapi.json returned 200 to 127.0.0.1
+2025-12-09 10:53:11,509 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:53:11,533 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 10:55:56,799 - INFO - main - Request: GET /examination/google.com from 127.0.0.1
+2025-12-09 10:55:56,800 - INFO - main - Response: GET /examination/google.com returned 404 to 127.0.0.1
+2025-12-09 10:55:56,804 - INFO - main - Request: GET /examination/google.com from 127.0.0.1
+2025-12-09 10:55:56,805 - INFO - main - Response: GET /examination/google.com returned 404 to 127.0.0.1
+2025-12-09 10:56:45,451 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:56:45,501 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 10:56:45,505 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:56:45,511 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 10:59:09,625 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:59:09,631 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 10:59:09,633 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:59:09,639 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 10:59:38,345 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:59:38,350 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 10:59:38,352 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 10:59:38,356 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:01:42,332 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:01:42,339 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:01:42,342 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:01:42,348 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:01:52,811 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:01:52,818 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:01:52,820 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:01:52,825 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:02:02,397 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:02:02,403 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:02:02,405 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:02:02,412 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:02:18,089 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:02:18,095 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:02:18,097 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:02:18,103 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:02:26,023 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:02:26,030 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:02:26,032 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:02:26,039 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:03:09,133 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:03:09,139 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:03:09,140 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:03:09,145 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:03:40,076 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:03:40,083 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:03:40,085 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:03:40,094 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:09:46,782 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:09:46,788 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:09:46,790 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:09:46,797 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:10:36,095 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:10:36,101 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:10:36,103 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:10:36,109 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:11:10,066 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:11:10,073 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:11:10,075 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:11:10,081 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:12:52,050 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:12:52,061 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:12:52,063 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:12:52,126 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:14:50,451 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:14:50,459 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:14:50,461 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:14:50,467 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:15:14,986 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:15:14,992 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:15:14,994 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:15:14,999 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:32:03,361 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:32:03,376 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:32:03,382 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:32:03,394 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:34:28,718 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:34:28,729 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:34:28,734 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:34:28,748 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:34:36,271 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:34:36,281 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:34:36,288 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:34:36,295 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:34:39,125 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:34:39,131 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:34:39,133 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:34:39,188 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:36:23,479 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:36:23,484 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:36:23,485 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:36:23,492 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:36:33,166 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:36:33,175 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:36:33,178 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:36:33,192 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:37:32,043 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:37:32,049 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:37:32,050 - INFO - main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-09 11:37:32,058 - INFO - main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-09 11:41:32,791 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:41:32,800 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:41:32,803 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:41:32,812 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:42:17,889 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:42:17,893 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:42:17,895 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:42:17,898 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:42:18,938 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:42:18,946 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:42:18,949 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:42:18,953 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:42:19,971 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:42:19,977 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:42:19,978 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:42:20,024 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:43:28,652 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:43:28,656 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:43:28,658 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:43:28,663 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:43:30,220 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:43:30,245 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:43:30,249 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:43:30,261 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:44:01,726 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:44:01,731 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:44:01,733 - INFO - main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-09 11:44:01,776 - INFO - main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-09 11:44:05,831 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:44:05,842 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 11:44:05,843 - INFO - main - Request: GET /domains from 127.0.0.1
+2025-12-09 11:44:05,853 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1

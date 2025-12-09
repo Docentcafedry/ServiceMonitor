@@ -1,106 +1,47 @@
-.container {
-    padding: 30px;
-    color: #333;
+.page-wrapper {
+  display: flex;
+  justify-content: center; /* horizontally */
+  padding-top: 40px;       /* optional */
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 5px;
+.website-monitor {
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-.subtitle {
-    text-align: center;
-    color: #777;
-    margin-bottom: 30px;
+.status-info div {
+  margin: 5px 0;
 }
 
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  margin-top: 10px;
 }
 
-.stat-card {
-    background: white;
-    padding: 20px 35px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+.history-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
 }
 
-.value {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.history-item.green {
+  background-color: green;
 }
 
-.value.green { color: #28a745; }
-.value.blue { color: #007bff; }
-.value.purple { color: #8b4de8; }
-.value.orange { color: #ff8c00; }
-
-.panel {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 850px;
-    margin: 0 auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+.history-item.red {
+  background-color: red;
 }
 
-.site-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+.history-item.gray {
+  background-color: lightgray;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #28a745;
-}
-
-.site-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.site-url {
-    color: #555;
-}
-
-.availability-grid {
-    display: grid;
-    grid-template-columns: repeat(30, 12px);
-    gap: 6px;
-    margin-bottom: 20px;
-}
-
-.cell {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.ok { background: #28a745; }
-.bad { background: #e74a3b; }
-.none { background: #d8d8d8; }
-
-.legend {
-    display: flex;
-    gap: 20px;
-    font-size: 14px;
-}
-
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
 
 
 .domain-card {

@@ -9,6 +9,7 @@ from db import (
     add_domain_to_database,
     get_domain_and_examination_from_db,
 )
+from utils import clean_url
 
 
 async def get_service_status(
@@ -85,7 +86,9 @@ async def get_domain_with_examinations(
 async def get_all_domains(session: AsyncSession):
     domains = await get_all_domains_from_db(session=session)
     domain_schemas = [
-        Domain.model_validate({"id": int(domain.id), "domain": domain.domain})
+        Domain.model_validate(
+            {"id": int(domain.id), "domain": clean_url(domain.domain)}
+        )
         for domain in domains
     ]
     return domain_schemas
