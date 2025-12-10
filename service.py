@@ -8,15 +8,16 @@ from db import (
     get_all_domains_from_db,
     add_domain_to_database,
     get_domain_and_examination_from_db,
+    get_db_connection,
 )
 from utils import clean_url
 
 
 async def get_service_status(
-    domain: Domain, session: ClientSession, db_session: AsyncSession
+    domain: Domain, http_session: ClientSession, db_session: AsyncSession
 ) -> Examination:
     time_now = datetime.datetime.now(datetime.timezone.utc)
-    async with session.get(domain.domain) as response:
+    async with http_session.get(domain.domain) as response:
         end_time = datetime.datetime.now(datetime.timezone.utc)
         status_code = response.status
         examination_time = datetime.datetime.now()
@@ -31,8 +32,10 @@ async def get_service_status(
         return examination
 
 
-async def get_status_for_all_domains(session: ClientSession, db_session: AsyncSession):
-    domains = await get_all_domains_from_db(session=db_session)
+async def get_status_for_all_domains(https_session: ClientSession, db_session_factory):
+    async with db_session_factory() as db_session:
+        domains = await get_all_domains_from_db(session=db_session)
+    print(domains)
     if not domains:
         print("Domains database is empty")
         return
@@ -40,14 +43,15 @@ async def get_status_for_all_domains(session: ClientSession, db_session: AsyncSe
         Domain.model_validate({"id": int(domain.id), "domain": domain.domain})
         for domain in domains
     ]
-    print(domain_schemas)
 
-    await asyncio.gather(
-        *[
-            get_service_status(domain=domain, session=session, db_session=db_session)
-            for domain in domain_schemas
-        ]
-    )
+    async def process(domain):
+
+        async with db_session_factory() as db_sess:
+            return await get_service_status(
+                domain=domain, http_session=https_session, db_session=db_sess
+            )
+
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
 
 
 async def add_domain(domain: str, session: AsyncSession) -> Domain:

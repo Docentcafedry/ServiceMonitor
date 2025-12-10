@@ -5036,3 +5036,564 @@ sqlalchemy.exc.IllegalStateChangeError: Method 'commit()' can't be called here; 
 2025-12-09 11:44:05,842 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
 2025-12-09 11:44:05,843 - INFO - main - Request: GET /domains from 127.0.0.1
 2025-12-09 11:44:05,853 - INFO - main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-09 18:49:11,526 - ERROR - asyncio - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-42' coro=<get_service_status() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/service.py:15> exception=ResourceClosedError('This transaction is closed')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2358, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 162, in execute
+    self.await_(_cursor.execute(operation, parameters))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/aiosqlite/cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/aiosqlite/cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_service_status
+    await add_examination_to_database(session=db_session, examination=examination)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 29, in add_examination_to_database
+    await session.commit()
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/ext/asyncio/session.py", line 1000, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 203, in greenlet_spawn
+    result = context.switch(value)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 228, in __exit__
+    raise value.with_traceback(traceback)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4467, in _flush
+    transaction.rollback(_capture_exception=True)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in rollback
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 101, in _go
+    self._raise_for_prerequisite_state(fn.__name__, current_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 986, in _raise_for_prerequisite_state
+    raise sa_exc.ResourceClosedError("This transaction is closed")
+sqlalchemy.exc.ResourceClosedError: This transaction is closed
+2025-12-09 18:59:41,909 - ERROR - asyncio - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-42' coro=<get_service_status() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/service.py:15> exception=ResourceClosedError('This transaction is closed')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2358, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py", line 162, in execute
+    self.await_(_cursor.execute(operation, parameters))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/aiosqlite/cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/aiosqlite/cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/aiosqlite/core.py", line 122, in _execute
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 30, in get_service_status
+    await add_examination_to_database(session=db_session, examination=examination)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/db/crud.py", line 29, in add_examination_to_database
+    await session.commit()
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/ext/asyncio/session.py", line 1000, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 203, in greenlet_spawn
+    result = context.switch(value)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 228, in __exit__
+    raise value.with_traceback(traceback)
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4467, in _flush
+    transaction.rollback(_capture_exception=True)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in rollback
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 101, in _go
+    self._raise_for_prerequisite_state(fn.__name__, current_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lesha/PycharmProjects/ServiceMonitor/.venv/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 986, in _raise_for_prerequisite_state
+    raise sa_exc.ResourceClosedError("This transaction is closed")
+sqlalchemy.exc.ResourceClosedError: This transaction is closed
+2025-12-10 10:46:27,810 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 52, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 49, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:47:02,222 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 53, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 50, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:47:17,728 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 53, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 50, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:47:40,182 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 54, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 51, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:47:53,681 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 54, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 51, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:49:01,456 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 55, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 52, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:49:49,723 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 56, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 53, in process
+    domain=domain, db_session=await anext(db_session), session=session
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:49:58,186 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 56, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 51, in process
+    session_for_func = await anext(db_session)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:50:08,974 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 56, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 51, in process
+    session_for_func = await anext(db_session)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:50:11,354 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 56, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 51, in process
+    session_for_func = await anext(db_session)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:51:20,789 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=RuntimeError('anext(): asynchronous generator is already running')>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=get_db_connection
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 56, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 51, in process
+    session_for_func = await anext(db_session)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: anext(): asynchronous generator is already running
+2025-12-10 10:51:35,777 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=TypeError("'AsyncSession' object is not an async iterator")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=async_session
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 38, in get_status_for_all_domains
+    single_db_session = await anext(db_session)
+                              ~~~~~^^^^^^^^^^^^
+TypeError: 'AsyncSession' object is not an async iterator
+2025-12-10 10:52:12,718 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=TypeError("'AsyncSession' object is not an async iterator")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=async_session
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 55, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 50, in process
+    session_for_func = await anext(db_session)
+                             ~~~~~^^^^^^^^^^^^
+TypeError: 'AsyncSession' object is not an async iterator
+2025-12-10 10:52:23,895 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=NameError("name 'anex' is not defined")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=async_session
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 55, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 50, in process
+    session_for_func = await anex
+                             ^^^^
+NameError: name 'anex' is not defined. Did you mean: 'anext'?
+2025-12-10 10:52:46,146 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=TypeError("object AsyncSession can't be used in 'await' expression")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=async_session
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 37, in get_status_for_all_domains
+    db_session = await db_session_factory()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object AsyncSession can't be used in 'await' expression
+2025-12-10 10:52:59,215 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=NameError("name 'anex' is not defined")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=async_session
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 55, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 50, in process
+    session_for_func = await anex
+                             ^^^^
+NameError: name 'anex' is not defined. Did you mean: 'anext'?
+2025-12-10 10:53:06,197 - ERROR - asyncio - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<wait() done, defined at /home/lesha/PycharmProjects/ServiceMonitor/main.py:27> exception=NameError("name 'session_for_func' is not defined")>
+Traceback (most recent call last):
+  File "/home/lesha/PycharmProjects/ServiceMonitor/main.py", line 30, in wait
+    await get_status_for_all_domains(
+        session=session, db_session_factory=async_session
+    )
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 55, in get_status_for_all_domains
+    await asyncio.gather(*[process(domain=domain) for domain in domain_schemas])
+  File "/home/lesha/PycharmProjects/ServiceMonitor/service.py", line 52, in process
+    domain=domain, db_session=session_for_func, session=session
+                              ^^^^^^^^^^^^^^^^
+NameError: name 'session_for_func' is not defined
+2025-12-10 11:17:42,032 - ERROR - sqlalchemy.pool.impl.AsyncAdaptedQueuePool - The garbage collector is trying to clean up non-checked-in connection <AdaptedConnection <Connection(Thread-1, started daemon 139875462469312)>>, which will be dropped, as it cannot be safely terminated.  Please ensure that SQLAlchemy pooled connections are returned to the pool explicitly, either by calling ``close()`` or by using appropriate context managers to manage their lifecycle.
+2025-12-10 11:25:05,915 - ERROR - sqlalchemy.pool.impl.AsyncAdaptedQueuePool - The garbage collector is trying to clean up non-checked-in connection <AdaptedConnection <Connection(Thread-1, started daemon 140428753356480)>>, which will be dropped, as it cannot be safely terminated.  Please ensure that SQLAlchemy pooled connections are returned to the pool explicitly, either by calling ``close()`` or by using appropriate context managers to manage their lifecycle.
+2025-12-10 11:47:46,530 - INFO - main - Request: GET /domains from testclient
+2025-12-10 11:47:46,533 - INFO - main - Response: GET /domains returned 200 to testclient
+2025-12-10 11:47:46,535 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-10 11:47:46,541 - INFO - main - Request: POST /add_domain from testclient
+2025-12-10 11:47:46,544 - INFO - main - Response: POST /add_domain returned 201 to testclient
+2025-12-10 11:47:46,546 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 201 Created"
+2025-12-10 11:47:46,555 - INFO - main - Request: POST /add_domain from testclient
+2025-12-10 11:47:46,558 - INFO - main - Response: POST /add_domain returned 400 to testclient
+2025-12-10 11:47:46,559 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 400 Bad Request"
+2025-12-10 11:47:46,567 - INFO - main - Request: GET /domains from testclient
+2025-12-10 11:47:46,571 - INFO - main - Response: GET /domains returned 200 to testclient
+2025-12-10 11:47:46,572 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-10 11:47:46,622 - INFO - main - Request: GET /examinations/some-domain.com from testclient
+2025-12-10 11:47:46,625 - INFO - main - Response: GET /examinations/some-domain.com returned 404 to testclient
+2025-12-10 11:47:46,626 - INFO - httpx - HTTP Request: GET http://testserver/examinations/some-domain.com "HTTP/1.1 404 Not Found"
+2025-12-10 11:47:46,637 - INFO - main - Request: GET /examinations/google.com from testclient
+2025-12-10 11:47:46,643 - INFO - main - Response: GET /examinations/google.com returned 200 to testclient
+2025-12-10 11:47:46,644 - INFO - httpx - HTTP Request: GET http://testserver/examinations/google.com "HTTP/1.1 200 OK"
+2025-12-10 11:48:39,146 - INFO - main - Request: GET /domains from testclient
+2025-12-10 11:48:39,149 - INFO - main - Response: GET /domains returned 200 to testclient
+2025-12-10 11:48:39,151 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-10 11:48:39,157 - INFO - main - Request: POST /add_domain from testclient
+2025-12-10 11:48:39,160 - INFO - main - Response: POST /add_domain returned 201 to testclient
+2025-12-10 11:48:39,162 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 201 Created"
+2025-12-10 11:48:39,169 - INFO - main - Request: POST /add_domain from testclient
+2025-12-10 11:48:39,172 - INFO - main - Response: POST /add_domain returned 400 to testclient
+2025-12-10 11:48:39,174 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 400 Bad Request"
+2025-12-10 11:48:39,181 - INFO - main - Request: GET /domains from testclient
+2025-12-10 11:48:39,183 - INFO - main - Response: GET /domains returned 200 to testclient
+2025-12-10 11:48:39,185 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-10 11:48:39,191 - INFO - main - Request: GET /examinations/some-domain.com from testclient
+2025-12-10 11:48:39,194 - INFO - main - Response: GET /examinations/some-domain.com returned 404 to testclient
+2025-12-10 11:48:39,195 - INFO - httpx - HTTP Request: GET http://testserver/examinations/some-domain.com "HTTP/1.1 404 Not Found"
+2025-12-10 11:48:39,203 - INFO - main - Request: GET /examinations/google.com from testclient
+2025-12-10 11:48:39,206 - INFO - main - Response: GET /examinations/google.com returned 200 to testclient
+2025-12-10 11:48:39,207 - INFO - httpx - HTTP Request: GET http://testserver/examinations/google.com "HTTP/1.1 200 OK"
+2025-12-10 11:49:50,025 - INFO - main - Request: GET /domains from testclient
+2025-12-10 11:49:50,029 - INFO - main - Response: GET /domains returned 200 to testclient
+2025-12-10 11:49:50,032 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-10 11:49:50,039 - INFO - main - Request: POST /add_domain from testclient
+2025-12-10 11:49:50,042 - INFO - main - Response: POST /add_domain returned 201 to testclient
+2025-12-10 11:49:50,043 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 201 Created"
+2025-12-10 11:49:50,050 - INFO - main - Request: POST /add_domain from testclient
+2025-12-10 11:49:50,053 - INFO - main - Response: POST /add_domain returned 400 to testclient
+2025-12-10 11:49:50,055 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 400 Bad Request"
+2025-12-10 11:49:50,061 - INFO - main - Request: GET /domains from testclient
+2025-12-10 11:49:50,063 - INFO - main - Response: GET /domains returned 200 to testclient
+2025-12-10 11:49:50,064 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-10 11:49:50,069 - INFO - main - Request: GET /examinations/some-domain.com from testclient
+2025-12-10 11:49:50,073 - INFO - main - Response: GET /examinations/some-domain.com returned 404 to testclient
+2025-12-10 11:49:50,075 - INFO - httpx - HTTP Request: GET http://testserver/examinations/some-domain.com "HTTP/1.1 404 Not Found"
+2025-12-10 11:49:50,083 - INFO - main - Request: GET /examinations/google.com from testclient
+2025-12-10 11:49:50,085 - INFO - main - Response: GET /examinations/google.com returned 200 to testclient
+2025-12-10 11:49:50,086 - INFO - httpx - HTTP Request: GET http://testserver/examinations/google.com "HTTP/1.1 200 OK"

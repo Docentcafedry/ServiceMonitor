@@ -34,6 +34,7 @@ async def add_examination_to_database(examination: Examination, session: AsyncSe
 
 async def get_all_domains_from_db(session: AsyncSession):
     res: Result = await session.execute(statement=select(Domain))
+    print(res)
     return res.scalars().all()
 
 
