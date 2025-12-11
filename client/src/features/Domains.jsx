@@ -8,7 +8,7 @@ export default function DomainList() {
 
   // Fetch data from localhost API
   useEffect(() => {
-    fetch("http://localhost:8000/domains")
+    fetch("http://localhost/api/domains")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch domain list");
         return res.json();

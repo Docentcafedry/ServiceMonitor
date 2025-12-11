@@ -1,0 +1,43 @@
+# Python-specific
+__pycache__/
+*.pyc
+*.pyo
+.Python/
+venv/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+
+# Editor/IDE files
+*.swp
+*~
+.DS_Store
+
+# Git-specific
+.git/
+.gitignore
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Build artifacts (if any)
+dist/
+build/
+*.egg-info/
+
+# Dependencies (if installed locally for dev)
+node_modules/
+
+# Docker-specific (if you have multiple Dockerfiles/contexts)
+Dockerfile*
+docker-compose*.yml
+
+test.db
+.env

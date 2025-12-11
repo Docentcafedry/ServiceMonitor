@@ -59,7 +59,7 @@ export default function DomainMonitor() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(`http://localhost:8000/examinations/${domain}`);
+        const response = await fetch(`http://localhost/api/examinations/${domain}`);
         const data = await response.json();
         
         if (data) {

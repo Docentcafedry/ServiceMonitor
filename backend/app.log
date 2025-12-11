@@ -1,0 +1,40 @@
+2025-12-11 10:28:49,354 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 10:28:49,358 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-11 10:28:49,363 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 10:28:49,367 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-11 10:28:50,626 - INFO - backend.main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-11 10:28:50,646 - INFO - backend.main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-11 10:28:50,650 - INFO - backend.main - Request: GET /examinations/google.com from 127.0.0.1
+2025-12-11 10:28:50,656 - INFO - backend.main - Response: GET /examinations/google.com returned 200 to 127.0.0.1
+2025-12-11 10:28:54,597 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 10:28:54,602 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-11 10:28:54,604 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 10:28:54,648 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-11 10:28:55,375 - INFO - backend.main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-11 10:28:55,387 - INFO - backend.main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-11 10:28:55,392 - INFO - backend.main - Request: GET /examinations/youtube.com from 127.0.0.1
+2025-12-11 10:28:55,398 - INFO - backend.main - Response: GET /examinations/youtube.com returned 200 to 127.0.0.1
+2025-12-11 10:28:56,909 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 10:28:56,914 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-11 10:28:56,916 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 10:28:56,922 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-11 10:29:20,501 - INFO - backend.main - Request: GET /domains from testclient
+2025-12-11 10:29:20,504 - INFO - backend.main - Response: GET /domains returned 200 to testclient
+2025-12-11 10:29:20,506 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-11 10:29:20,513 - INFO - backend.main - Request: POST /add_domain from testclient
+2025-12-11 10:29:20,516 - INFO - backend.main - Response: POST /add_domain returned 201 to testclient
+2025-12-11 10:29:20,517 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 201 Created"
+2025-12-11 10:29:20,525 - INFO - backend.main - Request: POST /add_domain from testclient
+2025-12-11 10:29:20,529 - INFO - backend.main - Response: POST /add_domain returned 400 to testclient
+2025-12-11 10:29:20,530 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 400 Bad Request"
+2025-12-11 10:29:20,538 - INFO - backend.main - Request: GET /domains from testclient
+2025-12-11 10:29:20,540 - INFO - backend.main - Response: GET /domains returned 200 to testclient
+2025-12-11 10:29:20,542 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-11 10:29:20,551 - INFO - backend.main - Request: GET /examinations/some-domain.com from testclient
+2025-12-11 10:29:20,555 - INFO - backend.main - Response: GET /examinations/some-domain.com returned 404 to testclient
+2025-12-11 10:29:20,556 - INFO - httpx - HTTP Request: GET http://testserver/examinations/some-domain.com "HTTP/1.1 404 Not Found"
+2025-12-11 10:29:20,564 - INFO - backend.main - Request: GET /examinations/google.com from testclient
+2025-12-11 10:29:20,569 - INFO - backend.main - Response: GET /examinations/google.com returned 200 to testclient
+2025-12-11 10:29:20,570 - INFO - httpx - HTTP Request: GET http://testserver/examinations/google.com "HTTP/1.1 200 OK"
+2025-12-11 11:17:52,407 - INFO - backend.main - Request: GET /domains from 127.0.0.1
+2025-12-11 11:17:52,459 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
