@@ -108,6 +108,7 @@ export default function DomainMonitor() {
             <div
               key={index}
               className={`history-item ${item.status_code === 200 ? "green" : item.status_code === 500 ? "red" : "gray"}`}
+              role='dot'
             />
           ))}
         </div>
