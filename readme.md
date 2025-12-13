@@ -39,9 +39,7 @@ cd ServiceMonitor
 docker-compose up --build -d
 ```
 
-3. Open your browser and navigate to: 
-
-  http://localhost:80
+3. Open your browser and navigate to: http://localhost:80
 
 
 ### Manual Setup
@@ -68,9 +66,7 @@ cd client
 npm run dev
 ```
 
-5. Access the web dashboard at:
-
-  http://localhost:5174
+5. Access the web dashboard at: http://localhost:5174
 
 ## ⚠️ Alert
 
