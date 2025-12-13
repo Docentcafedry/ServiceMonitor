@@ -41,7 +41,7 @@ docker-compose up --build -d
 
 3. Open your browser and navigate to: 
 
-http://localhost:80
+  http://localhost:80
 
 
 ### Manual Setup
@@ -69,7 +69,8 @@ npm run dev
 ```
 
 5. Access the web dashboard at:
-http://localhost:5174
+
+  http://localhost:5174
 
 ## ⚠️ Alert
 
