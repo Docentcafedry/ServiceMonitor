@@ -67,10 +67,10 @@ uvicorn main:app --reload --port 8080
 cd client
 npm run dev
 ```
-## ⚠️ Alert
-
-Please provide your .env file end DATABASE_URL env var for manual setup!!!
 
 5. Access the web dashboard at:
 http://localhost:5174
 
+## ⚠️ Alert
+
+Please provide your .env file end DATABASE_URL env var for manual setup!!!
