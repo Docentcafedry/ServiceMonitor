@@ -15,13 +15,13 @@ const mockData = {
     {
       domain_id: 1,
       status_code: 200,
-      response_time: "PT0.123S",
+      response_time: 'PT0.123S',
       examination_time: new Date().toISOString(),
     },
     {
       domain_id: 1,
       status_code: 200,
-      response_time: "PT0.456S",
+      response_time: 'PT0.456S',
       examination_time: new Date(Date.now() - 1000 * 60 * 60).toISOString(), // 1 hour ago
     },
   ],
@@ -77,14 +77,15 @@ describe('DomainMonitor', () => {
     expect(uptimeDiv).toHaveTextContent(/Аптайм.*\d+(\.\d+)?%/);
 
     // Last checked
-    const lastCheckedDiv = screen.getByText(/Последняя проверка/i).parentElement;
+    const lastCheckedDiv =
+      screen.getByText(/Последняя проверка/i).parentElement;
     expect(lastCheckedDiv.textContent).not.toBe('Последняя проверка: N/A');
 
     // History items colors
     const items = screen.getAllByRole('dot'); // history-item divs
     expect(items.length).toBe(mockData.examinations.length);
     expect(items[0].className).toContain('green'); // status_code 200
-    expect(items[1].className).toContain('green');   // status_code 200
+    expect(items[1].className).toContain('green'); // status_code 200
   });
 
   it('handles empty data', async () => {
@@ -107,7 +108,9 @@ describe('DomainMonitor', () => {
     // -------- Assertions --------
 
     // Status code fallback
-    const statusDiv = screen.getByText(/Статус код:/i).parentElement;
+    const statusText = await screen.findByText(/Статус код:/i);
+    const statusDiv = statusText.parentElement;
+
     expect(statusDiv).toHaveTextContent('Статус код: N/A');
 
     // Response time fallback
@@ -119,7 +122,8 @@ describe('DomainMonitor', () => {
     expect(uptimeDiv).toHaveTextContent('Аптайм (24ч): N/A%');
 
     // Last checked fallback
-    const lastCheckedDiv = screen.getByText(/Последняя проверка/i).parentElement;
+    const lastCheckedDiv =
+      screen.getByText(/Последняя проверка/i).parentElement;
     expect(lastCheckedDiv).toHaveTextContent('Последняя проверка: N/A');
   });
 });

@@ -1,44 +1,43 @@
-import { useNavigate } from "react-router";
-import { useState } from "react";
-
+import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
 export default function AddDomainForm() {
-  const [domain, setDomain] = useState("");
-  const [message, setMessage] = useState("");
-  const [messageColor, setMessageColor] = useState("green");
+  const [domain, setDomain] = useState('');
+  const [message, setMessage] = useState('');
+  const [messageColor, setMessageColor] = useState('green');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!domain.trim()) {
-      setMessage("Please enter a domain.");
-      setMessageColor("red");
+      setMessage('Please enter a domain.');
+      setMessageColor('red');
       return;
     }
 
     try {
-      const response = await fetch("http://localhost/api/add_domain", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('http://localhost/api/add_domain', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ domain }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        setMessage("Domain added successfully!");
-        setMessageColor("green");
-        setDomain("");
-        navigate("/");
+        setMessage('Domain added successfully!');
+        setMessageColor('green');
+        setDomain('');
+        navigate('/');
       } else {
-        setMessage(data.detail || "Error adding domain");
-        setMessageColor("red");
+        setMessage(data.detail || 'Error adding domain');
+        setMessageColor('red');
       }
     } catch (error) {
       console.error(error);
-      setMessage("Failed to connect to server.");
-      setMessageColor("red");
+      setMessage('Failed to connect to server.');
+      setMessageColor('red');
     }
   };
 
@@ -64,4 +63,4 @@ export default function AddDomainForm() {
       </form>
     </div>
   );
-};
+}

@@ -1,7 +1,7 @@
 .page-wrapper {
   display: flex;
   justify-content: center; /* horizontally */
-  padding-top: 40px;       /* optional */
+  padding-top: 40px; /* optional */
 }
 
 .website-monitor {
@@ -9,7 +9,7 @@
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .status-info div {
@@ -42,66 +42,64 @@
   background-color: lightgray;
 }
 
-
-
 .domain-card {
-    background: white;
-    padding: 18px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    max-width: 280px;
-    border: 1px solid #eee;
-    transition: 0.2s ease;
+  background: white;
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  max-width: 280px;
+  border: 1px solid #eee;
+  transition: 0.2s ease;
 }
 
 .domain-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .domain-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .status-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
 
 .status-dot.online {
-    background: #28a745;
+  background: #28a745;
 }
 
 .status-dot.offline {
-    background: #e74a3b;
+  background: #e74a3b;
 }
 
 .status-dot.unknown {
-    background: #bbb;
+  background: #bbb;
 }
 
 .domain-name {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .domain-note {
-    font-size: 14px;
-    color: #555;
-    margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
 }
 
 .domain-link {
-    font-size: 16px;
-    font-weight: bold;
-    color: #0077ff;
-    text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0077ff;
+  text-decoration: none;
 }
 
 .domain-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 body {

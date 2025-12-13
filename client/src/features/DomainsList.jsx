@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import DomainCard from "./DomainCard";
+import React, { useEffect, useState } from 'react';
+import DomainCard from './DomainCard';
 
 export default function DomainList() {
   const [domains, setDomains] = useState([]);
@@ -8,9 +8,9 @@ export default function DomainList() {
 
   // Fetch data from localhost API
   useEffect(() => {
-    fetch("http://localhost/api/domains")
+    fetch('http://localhost/api/domains')
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch domain list");
+        if (!res.ok) throw new Error('Failed to fetch domain list');
         return res.json();
       })
       .then((data) => {
@@ -25,21 +25,16 @@ export default function DomainList() {
   }, []);
 
   if (loading) return <div>Loading domain list...</div>;
-  if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
+  if (error) return <div style={{ color: 'red' }}>Error: {error}</div>;
 
   return (
     <div style={styles.wrapper}>
       {domains.length === 0 ? (
-        <h2 style={styles.emptyHeader}>
-          No domains available yet
-        </h2>
+        <h2 style={styles.emptyHeader}>No domains available yet</h2>
       ) : (
         <div style={styles.listContainer}>
           {domains.map((item) => (
-            <DomainCard
-              key={item.domain}
-              domain={item.domain}
-            />
+            <DomainCard key={item.domain} domain={item.domain} />
           ))}
         </div>
       )}
@@ -49,16 +44,16 @@ export default function DomainList() {
 
 const styles = {
   wrapper: {
-    padding: "20px"
+    padding: '20px',
   },
   emptyHeader: {
-    textAlign: "center",
-    color: "#666",
-    fontWeight: "500"
+    textAlign: 'center',
+    color: '#666',
+    fontWeight: '500',
   },
   listContainer: {
-    display: "flex",
-    gap: "20px",
-    flexWrap: "wrap"
-  }
+    display: 'flex',
+    gap: '20px',
+    flexWrap: 'wrap',
+  },
 };
