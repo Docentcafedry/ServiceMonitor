@@ -8,9 +8,10 @@ def clean_url(url: str) -> str:
 
 def validate_url(url: str) -> bool:
     """
-    Validate a URL in the format http://example.com or https://example.com
+    Validate a URL in the format:
+    http://www.example.com or https://www.example.com
     """
-    pattern = r"^(https?:\/\/)([\w-]+\.)+[\w-]+(\/[\w\-./?%&=]*)?$"
+    pattern = r"^(https?:\/\/)(www\.)[\w-]+(\.[\w-]+)+(\/[\w\-./?%&=]*)?$"
     return re.match(pattern, url) is not None
 
 

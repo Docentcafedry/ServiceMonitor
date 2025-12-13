@@ -38,3 +38,21 @@
 2025-12-11 10:29:20,570 - INFO - httpx - HTTP Request: GET http://testserver/examinations/google.com "HTTP/1.1 200 OK"
 2025-12-11 11:17:52,407 - INFO - backend.main - Request: GET /domains from 127.0.0.1
 2025-12-11 11:17:52,459 - INFO - backend.main - Response: GET /domains returned 200 to 127.0.0.1
+2025-12-13 11:13:09,676 - INFO - backend.main - Request: GET /domains from testclient
+2025-12-13 11:13:09,680 - INFO - backend.main - Response: GET /domains returned 200 to testclient
+2025-12-13 11:13:09,682 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-13 11:13:09,688 - INFO - backend.main - Request: POST /add_domain from testclient
+2025-12-13 11:13:09,692 - INFO - backend.main - Response: POST /add_domain returned 201 to testclient
+2025-12-13 11:13:09,693 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 201 Created"
+2025-12-13 11:13:09,701 - INFO - backend.main - Request: POST /add_domain from testclient
+2025-12-13 11:13:09,704 - INFO - backend.main - Response: POST /add_domain returned 400 to testclient
+2025-12-13 11:13:09,705 - INFO - httpx - HTTP Request: POST http://testserver/add_domain "HTTP/1.1 400 Bad Request"
+2025-12-13 11:13:09,713 - INFO - backend.main - Request: GET /domains from testclient
+2025-12-13 11:13:09,716 - INFO - backend.main - Response: GET /domains returned 200 to testclient
+2025-12-13 11:13:09,718 - INFO - httpx - HTTP Request: GET http://testserver/domains "HTTP/1.1 200 OK"
+2025-12-13 11:13:09,723 - INFO - backend.main - Request: GET /examinations/some-domain.com from testclient
+2025-12-13 11:13:09,725 - INFO - backend.main - Response: GET /examinations/some-domain.com returned 404 to testclient
+2025-12-13 11:13:09,727 - INFO - httpx - HTTP Request: GET http://testserver/examinations/some-domain.com "HTTP/1.1 404 Not Found"
+2025-12-13 11:13:09,735 - INFO - backend.main - Request: GET /examinations/google.com from testclient
+2025-12-13 11:13:09,739 - INFO - backend.main - Response: GET /examinations/google.com returned 200 to testclient
+2025-12-13 11:13:09,741 - INFO - httpx - HTTP Request: GET http://testserver/examinations/google.com "HTTP/1.1 200 OK"

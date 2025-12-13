@@ -1,6 +1,6 @@
 
 import './App.css'
-import DomainList from './features/Domains';
+import DomainList from './features/DomainsList';
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import DomainMonitor from './features/DomainMonitor';

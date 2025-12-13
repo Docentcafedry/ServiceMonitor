@@ -48,7 +48,7 @@ export default function AddDomainForm() {
         <h2 className="title">Add Domain</h2>
         <input
           type="text"
-          placeholder="Enter URL http://example.com"
+          placeholder="Enter URL http://www.example.com"
           value={domain}
           onChange={(e) => setDomain(e.target.value)}
           className="input"

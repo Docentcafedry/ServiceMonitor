@@ -28,22 +28,37 @@ export default function DomainList() {
   if (error) return <div style={{ color: "red" }}>Error: {error}</div>;
 
   return (
-    <div style={styles.listContainer}>
-      {domains.map((item) => (
-        <DomainCard
-          key={item.domain}
-          domain={item.domain}
-        />
-      ))}
+    <div style={styles.wrapper}>
+      {domains.length === 0 ? (
+        <h2 style={styles.emptyHeader}>
+          No domains available yet
+        </h2>
+      ) : (
+        <div style={styles.listContainer}>
+          {domains.map((item) => (
+            <DomainCard
+              key={item.domain}
+              domain={item.domain}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
 const styles = {
+  wrapper: {
+    padding: "20px"
+  },
+  emptyHeader: {
+    textAlign: "center",
+    color: "#666",
+    fontWeight: "500"
+  },
   listContainer: {
     display: "flex",
     gap: "20px",
-    flexWrap: "wrap",
-    padding: "20px"
+    flexWrap: "wrap"
   }
 };

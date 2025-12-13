@@ -31,7 +31,7 @@ describe("AddDomainForm", () => {
     );
 
     // Check for input field
-    expect(screen.getByPlaceholderText("Enter URL http://example.com")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Enter URL http://www.example.com")).toBeInTheDocument();
 
     // Check for submit button specifically
     expect(screen.getByRole("button", { name: "Add Domain" })).toBeInTheDocument();
@@ -54,62 +54,62 @@ describe("AddDomainForm", () => {
 
   // Test 3: Successful form submission
   it("submits form successfully", async () => {
-  fetch.mockResolvedValueOnce({
-    ok: true,
-    json: async () => ({ message: "Domain added successfully!" }),
-  });
+    fetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ message: "Domain added successfully!" }),
+    });
 
-  render(
-    <MemoryRouter>
-      <AddDomainForm />
-    </MemoryRouter>
-  );
-
-  // Enter domain
-  const input = screen.getByPlaceholderText("Enter URL http://example.com");
-  await userEvent.type(input, "http://example.com"); // ✅ await
-
-  // Click submit button
-  await userEvent.click(screen.getByRole("button", { name: "Add Domain" })); // ✅ await
-
-  // Wait for fetch to be called
-  await waitFor(() => {
-    expect(fetch).toHaveBeenCalledWith(
-      "http://localhost/api/add_domain",
-      expect.objectContaining({
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ domain: "http://example.com" }),
-      })
+    render(
+        <MemoryRouter>
+        <AddDomainForm />
+        </MemoryRouter>
     );
 
-    // Navigation should happen
-    expect(mockedNavigate).toHaveBeenCalledWith("/");
-  });
+    // Enter domain
+    const input = screen.getByPlaceholderText("Enter URL http://www.example.com");
+    await userEvent.type(input, "http://www.example.com"); // ✅ await
+
+    // Click submit button
+    await userEvent.click(screen.getByRole("button", { name: "Add Domain" })); // ✅ await
+
+    // Wait for fetch to be called
+    await waitFor(() => {
+        expect(fetch).toHaveBeenCalledWith(
+        "http://localhost/api/add_domain",
+        expect.objectContaining({
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ domain: "http://www.example.com" }),
+        })
+        );
+
+        // Navigation should happen
+        expect(mockedNavigate).toHaveBeenCalledWith("/");
+    });
 });
 
   // Test 4: API error response
   it("shows error message on failed submit", async () => {
   // Mock a failed API response
-  fetch.mockResolvedValueOnce({
-    ok: false,
-    json: async () => ({ detail: "Domain already exists" }),
-  });
+    fetch.mockResolvedValueOnce({
+        ok: false,
+        json: async () => ({ detail: "Domain already exists" }),
+    });
 
-  render(
-    <MemoryRouter>
-      <AddDomainForm />
-    </MemoryRouter>
-  );
+    render(
+        <MemoryRouter>
+        <AddDomainForm />
+        </MemoryRouter>
+    );
 
-  const input = screen.getByPlaceholderText("Enter URL http://example.com");
-  await userEvent.type(input, "http://example.com"); // ✅ input must be typed
+    const input = screen.getByPlaceholderText("Enter URL http://www.example.com");
+    await userEvent.type(input, "http://www.example.com"); // ✅ input must be typed
 
-  const button = screen.getByRole("button", { name: "Add Domain" });
-  await userEvent.click(button); // ✅ click submit
+    const button = screen.getByRole("button", { name: "Add Domain" });
+    await userEvent.click(button); // ✅ click submit
 
-  // Wait for error message
-  expect(await screen.findByText("Domain already exists")).toBeInTheDocument();
+    // Wait for error message
+    expect(await screen.findByText("Domain already exists")).toBeInTheDocument();
 });
 
   // Test 5: Network failure
@@ -122,8 +122,8 @@ describe("AddDomainForm", () => {
         </MemoryRouter>
     );
 
-    const input = screen.getByPlaceholderText("Enter URL http://example.com");
-    await userEvent.type(input, "http://example.com");
+    const input = screen.getByPlaceholderText("Enter URL http://www.example.com");
+    await userEvent.type(input, "http://www.example.com");
 
     const button = screen.getByRole("button", { name: "Add Domain" });
     await userEvent.click(button);
