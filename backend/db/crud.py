@@ -1,12 +1,12 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from .models import Domain, Examination as ExaminationModel
-from exceptions import (
+from backend.exceptions import (
     DomainAlreadyExistsError,
     ExaminationCreateDBError,
     NoDomainFoundError,
 )
 from sqlalchemy.exc import IntegrityError, ArgumentError
-from schemas import Examination
+from backend.schemas import Examination
 from sqlalchemy import select, Result
 from sqlalchemy.orm import joinedload
 
@@ -34,6 +34,7 @@ async def add_examination_to_database(examination: Examination, session: AsyncSe
 
 async def get_all_domains_from_db(session: AsyncSession):
     res: Result = await session.execute(statement=select(Domain))
+    print(res)
     return res.scalars().all()
 
 

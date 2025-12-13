@@ -1,0 +1,164 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center; /* horizontally */
+  padding-top: 40px;       /* optional */
+}
+
+.website-monitor {
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.status-info div {
+  margin: 5px 0;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.history-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.history-item.green {
+  background-color: green;
+}
+
+.history-item.red {
+  background-color: red;
+}
+
+.history-item.gray {
+  background-color: lightgray;
+}
+
+
+
+.domain-card {
+    background: white;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    max-width: 280px;
+    border: 1px solid #eee;
+    transition: 0.2s ease;
+}
+
+.domain-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.domain-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-dot.online {
+    background: #28a745;
+}
+
+.status-dot.offline {
+    background: #e74a3b;
+}
+
+.status-dot.unknown {
+    background: #bbb;
+}
+
+.domain-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.domain-note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+.domain-link {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0077ff;
+    text-decoration: none;
+}
+
+.domain-link:hover {
+    text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.input {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.button {
+  padding: 0.8rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+.message {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
